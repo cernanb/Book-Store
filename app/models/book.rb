@@ -1,3 +1,3 @@
-class Game < ActiveRecord::Base
+class Book < ActiveRecord::Base
   serialize :state
 end
