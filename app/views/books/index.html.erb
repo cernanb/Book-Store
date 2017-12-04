@@ -1,0 +1,11 @@
+<header class="header">
+  <h1>Your Books</h1>
+  <%= form_for(@book) do |f| %>
+    <%= f.text_field :title %>
+    <%= f.text_area :description %>
+    <%= f.submit %>
+  <% end %>
+  </form>
+</header>
+
+<div id="books"></div>

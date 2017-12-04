@@ -12,18 +12,19 @@ class BooksController < ApplicationController
 
   def create
     book = Book.create(book_params)
-    render json: book, status: 201
+    render json: book
   end
 
   def update
-    @book.update(book_params)
-    render json: @book
+    book = Book.find(params[:id])
+    book.update(book_params)
+    render json: book
   end
 
   private
 
   def book_params
-    params.require(:book).permit(:title, :description, state: [])
+    params.require(:book).permit(:title, :description)
   end
 
   def set_book
