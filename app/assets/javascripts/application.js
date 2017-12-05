@@ -11,6 +11,19 @@
 // about supported directives.
 //
 //= require rails-ujs
-//= require turbolinks
-//= require_tree .
 //= require book
+//= require bookStore
+//= require bookService
+//= require bookActions
+//= require renderer
+
+(() => {
+  console.log('hello')
+  debugger
+  store.getState().books.forEach(b => {
+
+    let booksDiv = document.getElementById('books')
+    console.log(booksDiv)
+    //$('#books').append(b.attributes.title)
+  })
+})()
