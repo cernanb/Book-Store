@@ -11,19 +11,12 @@
 // about supported directives.
 //
 //= require rails-ujs
-//= require book
 //= require bookStore
-//= require bookService
-//= require bookActions
-//= require renderer
+//= require services/bookService
+//= require actions/bookActions
+//= require components/book
+//= require components/books
 
-(() => {
-  console.log('hello')
-  debugger
-  store.getState().books.forEach(b => {
-
-    let booksDiv = document.getElementById('books')
-    console.log(booksDiv)
-    //$('#books').append(b.attributes.title)
-  })
+;(function() {
+  const books = new Books()
 })()
